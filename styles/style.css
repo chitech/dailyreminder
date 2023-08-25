@@ -1,0 +1,138 @@
+* { /* Tags all elemnents on page */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition-duration: 300ms; /* applies transition to page styles in 3 sec  */
+}
+body {
+    min-height: 100vh;
+    background-color: rgb(164, 175, 141);
+    color:black;
+    display: flex; /* layout aligned in a row */
+    flex-direction: column; /* set elements on page in column */
+    gap: 24px; /* direct child of body */
+    font-family: 'Raleway', sans-serif;
+    padding: 24px;
+}
+
+/* Center sub sections to align center of viewport */
+
+header, main, footer {
+    display: flex;
+    width: 800px; /* limits page width */
+    max-width: 100vw; /* ensures page reaches viewport width then becomes responsive */
+    margin: 0 auto; /* sets vertical and horizontal */
+}
+
+header {
+    display: flex;
+    align-items: center; /* aligns items vertically on page */
+    justify-content: space-between; /* horizontal justification */
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    flex: 1; /* get priority based on body parent container. Push footer to bottom */
+}
+
+/* Header fonts */
+h1 {
+    font-family: 'Raleway', sans-serif;    
+    font-weight: 400;
+}
+
+.plusIcon {
+    font-size: 2em;
+    cursor: pointer; /* shows this element interactive */
+}
+.plusIcon:hover {
+    color: green;
+}
+
+/* Reminder section */
+
+#enterReminder {
+    display: none;
+}
+
+#enterReminder form {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid green;
+    position: relative;   
+}
+
+#enterReminder form:focus-within {
+  border-color: #ffcc33;
+}
+#enterReminder input {
+    background: transparent;
+    outline: none;
+    padding: 14px;
+    color: white;
+    flex: 1;
+    border: none;
+    max-width: 100%;
+    font-size: 1.2em;;
+
+}
+#enterReminder button {
+    position: absolute; /*ensures button stays within parent  arguments top, right, height follows */
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: green;
+    border: none;
+    outline: none;
+    padding: 0 14px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+
+#enterReminder button:hover {
+    background: rgb(164, 175, 141);
+    color: green;
+
+}
+
+#reminders {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.reminderItem {
+    display: flex;
+    align-items: center;
+}
+.reminderItem p {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap:16px;
+}
+.actions i:hover {
+    color: rgb(186, 106, 106);
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    display: grid;
+    place-items: center;
+    background-color: blanchedalmond;
+    padding: 16px;
+}
+footer a {
+    color: inherit;
+}
+footer i {
+    cursor: pointer;
+}
+footer i:hover {
+    color: rgb(186, 106, 106);
+  
+}
