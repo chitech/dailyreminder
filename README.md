@@ -26,4 +26,5 @@ A simple Todo application built with HTML, CSS and JavaScript. This app showcase
 
 ## Author
 - Christine Brown Clayton
+- [View live demo](https://64e90a0980904f3c75692251--incandescent-marigold-500d4e.netlify.app)
 
